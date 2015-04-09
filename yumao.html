@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=640,target-densitydpi=device-dpi, user-scalable=0"  />
+	<title></title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.wrap{
+		background-color: #000;
+		position: absolute;
+		width: 640px;
+		height: 100%;
+		background: url(imgs/4/3.jpg) no-repeat 0 0;
+		background-size: cover;
+	}
+	.ym{
+		background-image: url(imgs/4/ym.png);
+		width: 31px;
+		height: 47px;
+		position: absolute;
+		left: 0;
+		top: -50px;
+		z-index: 100;
+		
+		/*-webkit-animation-name: ym;
+		-webkit-animation-duration: 20s;
+		-webkit-animation-iteration-count：infinite;
+		-webkit-animation-timing-function：linear;*/
+
+		
+	}
+
+	/*.ym:nth-child(1){
+		left: 100px;
+	}
+	.ym:nth-child(2){
+		left: 200px;
+	}
+	.ym:nth-child(3){
+		left: 300px
+	}
+	.ym:nth-child(4){
+		left: 400px;
+	}
+	.ym:nth-child(5){
+		left: 500px;
+	}*/
+
+	@-webkit-keyframes ym{
+		0%{
+
+		}
+		90%{
+			transform: rotateZ(360deg) translate3d(50px, 50px, 50px);
+			opacity: 1;
+		}
+		100%{
+			transform: rotateZ(360deg) translate3d(20px, 20px, 20px);
+			opacity: 0;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="ym"></div>
+		<div class="ym"></div>
+		<div class="ym"></div>
+		<div class="ym"></div>
+		<div class="ym"></div>
+	</div>
+
+	<script src="lib/zepto/zepto.min.js"></script>
+	<script type="text/javascript">
+	var isInit = true;
+
+
+	pos();
+	isInit = false;
+	setTimeout(function(){
+		pos();
+	}, 500);
+	setInterval(pos , 8000);
+
+	function pos(){
+		$('.ym').each(function(i, item){
+			if(!isInit){
+				$(item).css({
+					'transition': 'all linear 10s'
+				});
+			}
+			
+			$(item).css({
+				'transform': 'translate3d(' + random(100, 500) + 'px, ' + random(100, 300) + 'px, 0) rotate(' + random(-180, 180) + 'deg)'
+			});
+			
+		});
+	}
+
+	function random(min, max){
+		return min + Math.ceil(Math.random() * (max - min));
+	}
+
+	</script>
+</body>
+</html>

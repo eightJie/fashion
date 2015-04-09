@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+	<title>时尚</title>
+	<link rel="stylesheet" type="text/css" href="lib/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="lib/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="ani.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="wrap">
+	 <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div id="swiper_0" class="swiper-slide" style="background-image: url(imgs/bg-fir.jpg);">
+            </div>
+            <div class="swiper-slide">
+            	
+            </div>
+        </div>
+    </div>
+
+	
+</div>
+
+<script type="text/tmpl" id="swiper_tmpl_0">
+	<div class="fir">
+		<div class="circle-moved">
+			<div class="circle-out animated duration-16 infinite rotate-y"></div>
+			<div class="circle-inner animated duration-16 infinite rotate-x"></div>
+			<div class="circle-content">
+				<p class="font-1 animated duration-1 delay-f3 fadeIn">像大牌一样</p>
+				<p class="font-2 animated duration-1 delay-f3 fadeIn">YOURSELF</p>
+				<p class="font-3 animated duration-1 delay-f3 fadeIn">炫自己</p>
+			</div>
+			<div class="circle-show animated duration-f3 zoomBigIn"></div>
+		</div>
+		<div class="fir-shadow animated duration-2"></div>
+	</div>
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/swiper/js/swiper.js"></script>
+<script>
+	var isInit = true;
+	var mySwiper = new Swiper ('.swiper-container', {
+      direction: 'vertical',
+      onInit:function(s){
+      	showPage(s);
+      },
+      onSlideChangeEnd: function(s){
+      	showPage(s);
+      }
+    });
+
+    function showPage(mySwiper){
+    	var curIndex = mySwiper.activeIndex;
+    	var preIndex = mySwiper.previousIndex;
+
+    	$('#swiper_' + curIndex).html($('#swiper_tmpl_' + curIndex).html());
+    	if(!isInit)
+    		$('#swiper_' + preIndex).html('');
+
+    	isInit = false;
+    }
+
+</script>
+</body>
+</html>
