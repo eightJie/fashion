@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />
+	<meta name="viewport" content="width=640,target-densitydpi=device-dpi, user-scalable=0"  />
 	<title>时尚</title>
 	<link rel="stylesheet" type="text/css" href="lib/animate/animate.css">
 	<link rel="stylesheet" type="text/css" href="lib/swiper/css/swiper.min.css">
@@ -13,10 +13,19 @@
 <div class="wrap">
 	 <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div id="swiper_0" class="swiper-slide" style="background-image: url(imgs/bg-fir.jpg);">
+            <div id="swiper_item_1" class="swiper-slide">
             </div>
-            <div class="swiper-slide">
-            	
+            <div id="swiper_item_2" class="swiper-slide">
+            </div>
+            <div id="swiper_item_3" class="swiper-slide">
+            </div>
+            <div id="swiper_item_4" class="swiper-slide">
+            </div>
+            <div id="swiper_item_5" class="swiper-slide">
+            </div>
+            <div id="swiper_item_6" class="swiper-slide">
+            </div>
+            <div id="swiper_item_7" class="swiper-slide">
             </div>
         </div>
     </div>
@@ -24,19 +33,111 @@
 	
 </div>
 
-<script type="text/tmpl" id="swiper_tmpl_0">
-	<div class="fir">
-		<div class="circle-moved">
-			<div class="circle-out animated duration-16 infinite rotate-y"></div>
-			<div class="circle-inner animated duration-16 infinite rotate-x"></div>
-			<div class="circle-content">
-				<p class="font-1 animated duration-1 delay-f3 fadeIn">像大牌一样</p>
-				<p class="font-2 animated duration-1 delay-f3 fadeIn">YOURSELF</p>
-				<p class="font-3 animated duration-1 delay-f3 fadeIn">炫自己</p>
+<script type="text/tmpl" id="swiper_tmpl_1">
+	<div id="swiper-1" style="background-image: url(imgs/1/bg.jpg);">
+		<div class="fir-bg-ani animated duration-16 infinite linear"></div>
+		<div class="circle-moved-wrap">
+			<div class="circle-moved">
+				<div class="circle-out animated duration-16 infinite rotate-y"></div>
+				<div class="circle-inner animated duration-16 infinite rotate-x"></div>
+				<div class="circle-content">
+					<p class="animated fadeIn"></p>
+				</div>
+				<div class="circle-show animated duration-f5"></div>
 			</div>
-			<div class="circle-show animated duration-f3 zoomBigIn"></div>
+			<div class="fir-shadow animated duration-2"></div>
+
+			<div class="fir-ring-wrap">
+				<div class="ring animated duration-1"></div>
+				<div class="ring-c-inner animated duration-1"></div>
+				<div class="ring-c-out animated"></div>
+			</div>
+			<div class="fir-circle-s animated duration-4"></div>
+			<div class="fir-ring-s animated delay-2"></div>
 		</div>
-		<div class="fir-shadow animated duration-2"></div>
+	</div>
+</script>
+<script type="text/tmpl" id="swiper_tmpl_2">
+	<div id="swiper-2" style="background-image: url(imgs/2/bg-2.jpg);">
+		<div class="ring-wrap">
+			<div class="ring"></div>
+			<div class="ring-light"><div class="light"></div></div>
+			<div class="ring-font animated delay-1 duration-f5"></div>
+		</div>
+		<div class="sec-yellow animated duration-2"></div>
+		<div class="sec-circle"></div>
+		<div class="sec-fashion-wrap animated slideInRight duration-f5">
+			<div class="sec-fashion animated delay-2 duration-f8"></div>
+		</div>
+		<div class="sec-black animated duration-2"></div>
+		<div class="sec-button-font animated slideInRight duration-f8"></div>
+	</div>
+</script>
+<script type="text/tmpl" id="swiper_tmpl_3">
+	<div id="swiper-3" style="background-image: url(imgs/3/bg-3.jpg);">
+		<div class="third-ring animated duration-2"></div>
+		<div class="third-circle animated duration-8"></div>
+		<div class="third-sj animated infinite duration-3"></div>
+		<div class="third-sj-s animated infinite duration-3"></div>
+		<div id="third-content-txt" class="animated flyInLeft">
+			万事皆有可能
+		</div>
+	</div>
+</script>
+<script type="text/tmpl" id="swiper_tmpl_4">
+	<div id="swiper-4" style="background-image: url(imgs/4/bg.jpg);">
+		<div class="fourth-circle animated duration-4"></div>
+		<div class="fourth-circle-half animated duration-4"></div>
+		<div id="fourth-content-txt" class="animated slideInUp duration-f5">
+		每段人生都是传奇
+		</div>
+	</div>
+</script>
+<script type="text/tmpl" id="swiper_tmpl_5">
+	<div id="swiper-5" style="background-image: url(imgs/5/bg.jpg);">
+		<div class="fifth-circle animated duration-4"></div>
+		<div class="fifth-circle-half animated duration-4"></div>
+		<div id="fifth-content-txt" class="animated flyInLeft">
+		不断改变生命才充满惊喜。
+		</div>
+	</div>
+</script>
+<script type="text/tmpl" id="swiper_tmpl_6">
+	<div id="swiper-6" style="background-image: url(imgs/6/bg.jpg);">
+		<div class="sixth-circle animated duration-8"></div>
+		<div class="sixth-ring animated duration-6"></div>
+		<div class="sixth-circle-top animated duration-6 linear"></div>
+		<div id="sixth-content-txt" class="animated slideInLeft duration-f5">
+			<p>为完美而固执</p>
+			<p>为自由而勇敢</p>
+		</div>
+	</div>
+</script>
+<script type="text/tmpl" id="swiper_tmpl_7">
+	<div id="swiper-7" style="background-image: url(imgs/7/bg.jpg);">
+		<div class="seven-action">
+			<div class="seven-action-children animated duration-f5 delay-2d5">
+				<div class="w-left animated duration-f5"></div>
+				<div class="btn-wrap">
+					<div class="btn"></div>
+				</div>
+				<div class="w-right animated duration-f5"></div>
+				<div class="seven-hand animated duration-2"></div>
+			</div>
+			<div class="seven-bomb animated duration-4 delay-2"></div>
+		</div>
+		<div class="seven-photos">
+			<div class="photo-item animated duration-f8" style="background-image: url(imgs/7/1.jpg);"></div>
+			<div class="photo-item animated duration-f8" style="background-image: url(imgs/7/2.jpg);"></div>
+			<div class="photo-item animated duration-f8" style="background-image: url(imgs/7/3.jpg);"></div>
+		</div>
+		<div class="seven-bg-ani">
+			<div class="seven-c-bottom animated duration-5 delay-3"></div>
+			<div class="seven-c-left animated duration-5 delay-3"></div>
+			<div class="seven-c-top animated duration-5 delay-3"></div>
+		</div>
+		<div id="seven-content-txt-s" class="animated delay-4">细节决定优雅</div>
+		<div id="seven-content-txt" class="animated flyInLeft delay-4">时尚属于爱自己的人</div>
 	</div>
 </script>
 <script src="lib/zepto/zepto.min.js"></script>
@@ -55,11 +156,12 @@
 
     function showPage(mySwiper){
     	var curIndex = mySwiper.activeIndex;
+    	var curNum = curIndex + 1;
     	var preIndex = mySwiper.previousIndex;
 
-    	$('#swiper_' + curIndex).html($('#swiper_tmpl_' + curIndex).html());
+    	$('#swiper_item_' + curNum).html($('#swiper_tmpl_' + curNum).html());
     	if(!isInit)
-    		$('#swiper_' + preIndex).html('');
+    		$('#swiper_item_' + (preIndex+1)).html('');
 
     	isInit = false;
     }

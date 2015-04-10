@@ -3,6 +3,8 @@
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .bg-cover{
@@ -10,4 +12,84 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ab-center(@wid, @hei){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: @wid;
+	height: @hei;
+	margin-left: -@wid/2;
+	margin-top: -@hei/2;
+
+}
+
+.bg-normal(@url){
+	background: url(@url) no-repeat center center;
+}
+
+.ani-name(@name){
+	-webkit-animation-name: @name;
+	animation-name: @name;
+}
+
+.ani-time-func(@type){
+	-webkit-animation-timing-function: @type;
+	animation-timing-function: @type;
+}
+
+.ani-delay(@time){
+	-webkit-animation-delay: @time;
+	animation-delay: @time;
+}
+
+.flyInLeft{
+	.ani-name(flyInLeft);
+}
+@-webkit-keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+    100%{
+    	-webkit-transform: translateX(0);
+    	transform: translateX(0);
+    }
+}
+@keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+    100%{
+    	-webkit-transform: translateX(0);
+    	transform: translateX(0);
+    }
+}
+
+.flyInRight{
+	.ani-name(flyInRight);
+}
+@-webkit-keyframes flyInRight{
+    0% {
+    	-webkit-transform: translateX(1000px);
+    	transform: translateX(1000px);
+    }
+    100%{
+    	-webkit-transform: translateX(0);
+    	transform: translateX(0);
+    }
+}
+@keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(1000px);
+    	transform: translateX(1000px);
+    }
+    100%{
+    	-webkit-transform: translateX(0);
+    	transform: translateX(0);
+    }
 }
