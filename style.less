@@ -26,16 +26,18 @@ div[id*='-content-txt']{
 	height: 100%;
 }
 
-[id^="bg-h-swiper-"]{
-	.bg-cover();
-	background-position: center top;
-	border: 12px solid #d2d3d5;
-	position: absolute;
-	left: 50%;
-	top: 80px;
-	margin-left: -297px;
-	width: 594px;
-	height: 504px;
+.horizontal{
+	[id^="bg-swiper-"]{
+		.bg-cover();
+		background-position: center top;
+		border: 12px solid #d2d3d5;
+		position: absolute;
+		left: 50%;
+		top: 80px;
+		margin-left: -297px;
+		width: 594px;
+		height: 504px;
+	}
 }
 
 .wrap{
@@ -73,6 +75,7 @@ div[id*='-content-txt']{
 	.bg-normal('imgs/1/bg-ani.png');
 	.bg-contain();
 	top: 0;
+	-webkit-transform-origin: center top;
 	transform-origin: center top;
 	.ani-name(fir-bg-ani);
 }
@@ -743,6 +746,7 @@ div[id*='-content-txt']{
 	height: 337px;
 	-webkit-animation-name: third-circle;
 	animation-name: third-circle;
+	-webkit-transform-origin: right bottom;
 	transform-origin: right bottom;
 	z-index: 5;
 }
@@ -871,6 +875,7 @@ div[id*='-content-txt']{
 	height: 630px;
 	-webkit-animation-name: fourth-circle-half;
 	animation-name: fourth-circle-half;
+	-webkit-transform-origin: left center;
 	transform-origin: left center;
 }
 @-webkit-keyframes fourth-circle-half{
@@ -935,6 +940,7 @@ div[id*='-content-txt']{
 	height: 307px;
 	-webkit-animation-name: fifth-circle-half;
 	animation-name: fifth-circle-half;
+	-webkit-transform-origin: center bottom;
 	transform-origin: center bottom;
 }
 @-webkit-keyframes fifth-circle-half{
@@ -1042,6 +1048,7 @@ div[id*='-content-txt']{
 	height: 350px;
 	-webkit-animation-name: sixth-ring;
 	animation-name: sixth-ring;
+	-webkit-transform-origin: left bottom;
 	transform-origin: left bottom;
 }
 @-webkit-keyframes sixth-ring{
@@ -1250,8 +1257,8 @@ div[id*='-content-txt']{
 	.ani-name(seven-bomb);
 }
 .seven-bomb-child{
-	.ani-delay(0.5s);
-	background-position: 100px 100px;
+	.ani-delay(0.2s);
+	.bg-normal('imgs/7/bomb-2.png');
 }
 @-webkit-keyframes seven-bomb{
     0% {
@@ -1284,6 +1291,7 @@ div[id*='-content-txt']{
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		-webkit-transform-origin: left bottom;
 		transform-origin: left bottom;
 		.ani-name(seven-photos);
 
@@ -1338,6 +1346,7 @@ div[id*='-content-txt']{
 	width: 640px;
 	height: 412px;
 	.ani-name(seven-c-bottom);
+	-webkit-transform-origin: center bottom;
 	transform-origin: center bottom;
 }
 @-webkit-keyframes seven-c-bottom{
@@ -1385,6 +1394,7 @@ div[id*='-content-txt']{
 	width: 419px;
 	height: 494px;
 	.ani-name(seven-c-left);
+	-webkit-transform-origin: left center;
 	transform-origin: left center;
 }
 @-webkit-keyframes seven-c-left{
@@ -1441,6 +1451,7 @@ div[id*='-content-txt']{
 	width: 238px;
 	height: 142px;
 	.ani-name(seven-c-left);
+	-webkit-transform-origin: right top;
 	transform-origin: right top;
 }
 
