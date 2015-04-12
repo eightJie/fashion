@@ -27,6 +27,17 @@ div[id*='-content-txt']{
 }
 
 .horizontal{
+	
+	&:before{
+		background: url(imgs/bg-h.png) no-repeat left bottom;
+		.bg-contain();
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 315px;
+		height: 785px;
+	}
+
 	[id^="bg-swiper-"]{
 		.bg-cover();
 		background-position: center top;
@@ -37,7 +48,11 @@ div[id*='-content-txt']{
 		margin-left: -297px;
 		width: 594px;
 		height: 504px;
+
 	}
+
+
+
 }
 
 .wrap{
@@ -1251,23 +1266,36 @@ div[id*='-content-txt']{
 }
 
 .seven-bomb{
-	.bg-normal('imgs/7/bomb.png');
+	.bg-normal('imgs/7/bomb-2.png');
 	.bg-contain();
 	.ab-center(401px, 453px);
 	.ani-name(seven-bomb);
 }
 .seven-bomb-child{
 	.ani-delay(0.2s);
-	.bg-normal('imgs/7/bomb-2.png');
+	.bg-normal('imgs/7/bomb.png');
+	.bg-contain();
+	.ab-center(401px, 453px);
 }
 @-webkit-keyframes seven-bomb{
     0% {
     	-webkit-transform: scale(0);
     	transform: scale(0);
     }
+    80%{
+    	-webkit-transform: scale(3);
+    	transform: scale(3);
+    	opacity: 1;
+    }
+    90%{
+    	-webkit-transform: scale(3);
+    	transform: scale(3);
+    	opacity: .5;
+    }
     100%{
-    	-webkit-transform: scale(2);
-    	transform: scale(2);
+    	-webkit-transform: scale(3);
+    	transform: scale(3);
+    	opacity: 1;
     }
 }
 @keyframes seven-bomb{
@@ -1275,9 +1303,20 @@ div[id*='-content-txt']{
     	-webkit-transform: scale(0);
     	transform: scale(0);
     }
+    80%{
+    	-webkit-transform: scale(3);
+    	transform: scale(3);
+    	opacity: 1;
+    }
+    90%{
+    	-webkit-transform: scale(3);
+    	transform: scale(3);
+    	opacity: .5;
+    }
     100%{
-    	-webkit-transform: scale(2);
-    	transform: scale(2);
+    	-webkit-transform: scale(3);
+    	transform: scale(3);
+    	opacity: 1;
     }
 }
 
