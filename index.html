@@ -42,14 +42,14 @@
             	<div id="swiper-2" class="horizontal">
 					<div id="bg-swiper-2" class="animated zoomBigIn duration-2" style="background-image: url(imgs/2/bg-2.jpg);" data-wbi data-wbm_photo data-wb_drag_bgimg data-wb_pinch_bgimg data-wb_set_bgimg data-ws_lazyimg data-ws_bgimg></div>
 					<div class="ring-wrap">
-						<div class="ring"></div>
-						<div class="ring-light"><div class="light"></div></div>
+						<div class="ring animated fadeIn"></div>
+						<div class="ring-light animated"><div class="light"></div></div>
 						<div id="sec-content-txt" class="ring-font animated duration-f5">
 							潮流不止，风格永存
 						</div>
 					</div>
 					<div class="sec-yellow animated duration-2"></div>
-					<div class="sec-circle"></div>
+					<div class="sec-circle animated"></div>
 					<div class="sec-fashion-wrap animated slideInRight duration-f5">
 						<div class="sec-fashion-fade animated duration-f5">
 							<div class="sec-fashion animated delay-1 duration-f1"></div>
@@ -161,12 +161,15 @@
 
     	if (curNum == 7) {
     		$('.seven-action-children').css('display', 'block');
+    		$('.seven-action').css('z-index', 100);
 
     		$('#J-seven-btn').on('click', function(){
     			$('.seven-action-children').css('display', 'none');
     			$('.seven-action').css('z-index', 1);
     			$('.seven-bomb').addClass('block');
     			$('#swiper-7').find('.animated').addClass('block');
+
+    			$('#J-seven-btn').off('click');
   			});
 
     		$('.seven-action').find('.animated').not('.seven-bomb').addClass('block');
