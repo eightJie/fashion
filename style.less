@@ -70,10 +70,17 @@ div[id*='-content-txt']{
 	text-align: center;
 }
 
+.loading{
+	.bg-normal('imgs/loading.png');
+	.bg-contain();
+	.ab-center(66px, 66px);
+}
+
 .swiper-container{
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	visibility: hidden;
 }
 
 .swiper-slide{
