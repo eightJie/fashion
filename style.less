@@ -28,7 +28,9 @@ div[id*='-content-txt']{
 
 .horizontal{
 	
-	&:before{
+	&::before{
+		content: '';
+		display: block;
 		background: url(imgs/bg-h.png) no-repeat left bottom;
 		.bg-contain();
 		position: absolute;
@@ -36,10 +38,12 @@ div[id*='-content-txt']{
 		bottom: 0;
 		width: 315px;
 		height: 785px;
+		opacity: .5;
 	}
 
 	[id^="bg-swiper-"]{
 		.bg-cover();
+		background-color: #efdeca;
 		background-position: center top;
 		border: 12px solid #d2d3d5;
 		position: absolute;
@@ -1266,9 +1270,9 @@ div[id*='-content-txt']{
 }
 
 .seven-bomb{
-	.bg-normal('imgs/7/bomb-2.png');
+	.bg-normal('imgs/7/bomb.png');
 	.bg-contain();
-	.ab-center(401px, 453px);
+	.ab-center(606px, 627px);
 	.ani-name(seven-bomb);
 }
 .seven-bomb-child{
@@ -1282,20 +1286,20 @@ div[id*='-content-txt']{
     	-webkit-transform: scale(0);
     	transform: scale(0);
     }
-    80%{
-    	-webkit-transform: scale(3);
-    	transform: scale(3);
-    	opacity: 1;
+    10%{
+    	-webkit-transform: scale(2);
+    	transform: scale(2);
+    	// opacity: 1;
     }
-    90%{
-    	-webkit-transform: scale(3);
-    	transform: scale(3);
-    	opacity: .5;
-    }
+    // 90%{
+    // 	-webkit-transform: scale(3);
+    // 	transform: scale(3);
+    	// opacity: .5;
+    // }
     100%{
     	-webkit-transform: scale(3);
     	transform: scale(3);
-    	opacity: 1;
+    	// opacity: 1;
     }
 }
 @keyframes seven-bomb{
@@ -1326,6 +1330,7 @@ div[id*='-content-txt']{
 
 	.photo-item{
 		.bg-cover();
+		background-color: #efdeca;
 		border: 10px solid #fff;
 		position: absolute;
 		width: 100%;
