@@ -26,7 +26,6 @@ $(window).on('load', function() {
 		var preIndex = mySwiper.previousIndex % 7;
 		var preNum = preIndex + 1;
 
-
 		if (curNum == 7) {
 
 			$('.seven-photos .photo-item').removeClass('flyOutLeft').addClass('flyInLeft delay');
@@ -61,6 +60,15 @@ $(window).on('load', function() {
 			$('.swiper_item_' + preNum).find('.animated').removeClass('block');
 		}
 	}
+
+});
+
+/**
+ * 左右滑动图片
+ * @param  {[type]} win [description]
+ * @return {[type]}     [description]
+ */
+(function(win){
 
 	function DyPager(selector, arrowLeft, arrowRight) {
 		this.container = $(selector);
@@ -116,11 +124,6 @@ $(window).on('load', function() {
 				evt.preventDefault();
 			});
 
-			//  		self.container.on('swipeLeft', function(evt) {
-			// 	self._toLeft(evt);
-			// }).on('swipeRight', function(evt) {
-			// 	self._toRight(evt);
-			// });
 		},
 
 		_toLeft: function() {
@@ -171,4 +174,5 @@ $(window).on('load', function() {
 
 	};
 
-});
+	win.DyPager = DyPager;
+})(window);
