@@ -24,6 +24,7 @@ $(window).on('load', function() {
 		var curIndex = mySwiper.activeIndex % 7;
 		var curNum = curIndex + 1;
 		var preIndex = mySwiper.previousIndex % 7;
+		var preNum = preIndex + 1;
 
 
 		if (curNum == 7) {
@@ -39,21 +40,33 @@ $(window).on('load', function() {
 				$('.seven-bomb').addClass('block');
 				$('.swiper-7').find('.animated').addClass('block');
 
+				setTimeout(function(){
+					$('.seven-arrow.left').css('opacity', 1);
+				}, 3000);
+
 				$('.J-seven-btn').off('click');
 			});
 
 			$('.seven-action').find('.animated').not('.seven-bomb').addClass('block');
 
+			new DyPager('.swiper-slide-active .seven-photos', '.swiper-slide-active .seven-arrow.left', '.swiper-slide-active .seven-arrow.right');
+
 		} else {
 			$('.swiper_item_' + curNum).find('.animated').addClass('block');
 		}
-		if (preIndex != curIndex)
-			$('.swiper_item_' + (preIndex + 1)).find('.animated').removeClass('block');
+		if (preIndex != curIndex){
+			if(preNum == 7){
+				$('.seven-arrow').css('opacity', 0);
+			}
+			$('.swiper_item_' + preNum).find('.animated').removeClass('block');
+		}
 	}
 
-	function DyPager(selector) {
+	function DyPager(selector, arrowLeft, arrowRight) {
 		this.container = $(selector);
 		this.items = this.container.children();
+		this.arrowLeft = $(arrowLeft);
+		this.arrowRight = $(arrowRight);
 
 		this._curIndex = 0;
 		this._timer = null;
@@ -67,7 +80,7 @@ $(window).on('load', function() {
 			var self = this;
 			var container = self.container;
 
-
+			container.off('touchstart');
 			container.on('touchstart', function(evt) {
 				var touchObj = evt.changedTouches[0],
 					touchEndObj;
@@ -123,6 +136,8 @@ $(window).on('load', function() {
 			$cur.removeClass('flyInLeft delay');
 			$cur.addClass('flyOutLeft');
 			self._curIndex++;
+
+			self._showArrow();
 		},
 
 		_toRight: function() {
@@ -138,13 +153,22 @@ $(window).on('load', function() {
 			$cur.removeClass('flyOutLeft delay');
 			$cur.addClass('flyInLeft');
 
+			self._showArrow();
+		},
 
+		_showArrow: function(){
+			var self = this;
+
+			if(self._curIndex <= 0){
+				self.arrowRight.css('opacity', '0');
+			}else if(self._curIndex >= self.items.length - 1){
+				self.arrowLeft.css('opacity', '0');
+			}else{
+				self.arrowRight.css('opacity', '1');
+				self.arrowLeft.css('opacity', '1');
+			}
 		}
 
 	};
-
-	$('.seven-photos').each(function(i, c) {
-		new DyPager(c);
-	});
 
 });
