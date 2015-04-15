@@ -1,5 +1,6 @@
 @import 'common/reset.less';
 @import 'common/func.less';
+@import 'ani.less';
 
 div[id*='-content-txt']{
 	color: #322e2f;
@@ -1344,44 +1345,36 @@ div[id*='-content-txt']{
 		height: 100%;
 		-webkit-transform-origin: left bottom;
 		transform-origin: left bottom;
-		.ani-name(seven-photos);
 
 		&:nth-child(1){
 			-webkit-transform: rotateZ(5deg) translate3d(-65px, -65px, 0);
     		transform: rotateZ(5deg) translate3d(-65px, -65px, 0);
     		z-index: 3;
-    		.ani-delay(2.9s);
+
+    		&.delay{
+    			.ani-delay(2.9s);
+    		}
 		}
 		&:nth-child(2){
 			-webkit-transform: rotateZ(7deg) translate3d(-40px, -40px, 0);
     		transform: rotateZ(7deg) translate3d(-40px, -40px, 0);
     		z-index: 2;
-    		.ani-delay(2.7s);
+    		&.delay{
+    			.ani-delay(2.7s);
+    		}
 		}
 		&:nth-child(3){
 			-webkit-transform: rotateZ(8deg) translate3d(-10px, -10px, 0);
     		transform: rotateZ(8deg) translate3d(-10px, -10px, 0);
     		z-index: 1;
-    		.ani-delay(2.5s);
+
+    		&.delay{
+	    		.ani-delay(2.5s);
+    		}
 		}
+
 	}
 
-}
-@-webkit-keyframes seven-photos{
-    0% {
-    	-webkit-transform: translateX(-5000px);
-    	transform: translateX(-5000px);
-    }
-    100%{
-    }
-}
-@keyframes seven-photos{
-    0% {
-    	-webkit-transform: translateX(-5000px);
-    	transform: translateX(-5000px);
-    }
-    100%{
-    }
 }
 
 .seven-bg-ani{

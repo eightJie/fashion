@@ -121,6 +121,110 @@
 	        transition-timing-function: linear;
 }
 
+.ani-name(@name){
+	-webkit-animation-name: @name;
+	animation-name: @name;
+}
+
+.ani-time-func(@type){
+	-webkit-animation-timing-function: @type;
+	animation-timing-function: @type;
+}
+
+.ani-delay(@time){
+	-webkit-animation-delay: @time;
+	animation-delay: @time;
+}
+
+.animated.flyInLeft{
+	.ani-name(flyInLeft);
+}
+@-webkit-keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+    100%{
+    	// -webkit-transform: translateX(0);
+    	// transform: translateX(0);
+    }
+}
+@keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+    100%{
+    	// -webkit-transform: translateX(0);
+    	// transform: translateX(0);
+    }
+}
+
+.animated.flyOutLeft{
+	.ani-name(flyOutLeft);
+}
+@-webkit-keyframes flyOutLeft{
+    0% {
+    }
+    100%{
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+}
+@keyframes flyOutLeft{
+    0% {
+    }
+    100%{
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+}
+
+.animated.flyInRight{
+	.ani-name(flyInRight);
+}
+@-webkit-keyframes flyInRight{
+    0% {
+    	-webkit-transform: translateX(1000px);
+    	transform: translateX(1000px);
+    }
+    100%{
+    	// -webkit-transform: translateX(0);
+    	// transform: translateX(0);
+    }
+}
+@keyframes flyInRight{
+    0% {
+    	-webkit-transform: translateX(1000px);
+    	transform: translateX(1000px);
+    }
+    100%{
+    	// -webkit-transform: translateX(0);
+    	// transform: translateX(0);
+    }
+}
+
+.animated.flyOutRight{
+	.ani-name(flyOutRight);
+}
+@-webkit-keyframes flyOutRight{
+    0% {
+    }
+    100%{
+    	-webkit-transform: translateX(1000px);
+    	transform: translateX(1000px);
+    }
+}
+@keyframes flyOutRight{
+    0% {
+    }
+    100%{
+    	-webkit-transform: translateX(1000px);
+    	transform: translateX(1000px);
+    }
+}
+
+
 /**
  * 顺时针旋转
  */
@@ -154,7 +258,7 @@
 	}
 }
 
-.rotate-x{
+.animated.rotate-x{
 	-webkit-animation-name: rotate-x;
     animation-name: rotate-x;
     -webkit-animation-timing-function: linear;
@@ -195,7 +299,7 @@
 }
 
 
-.rotate-y{
+.animated.rotate-y{
 	-webkit-animation-name: rotate-y;
     animation-name: rotate-y;
     -webkit-animation-timing-function: linear;
@@ -226,12 +330,14 @@
   }
 }
 
-.zoomBigIn{
+.animated.zoomBigIn{
 	-webkit-animation-name: zoomBigIn;
 	animation-name: zoomBigIn;
 	-webkit-animation-timing-function: ease-out;
 	animation-timing-function: ease-out;
 }
+
+
 
 
 
