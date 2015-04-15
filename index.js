@@ -27,6 +27,9 @@ $(window).on('load', function() {
 
 
 		if (curNum == 7) {
+
+			$('.seven-photos .photo-item').removeClass('flyOutLeft').addClass('flyInLeft delay');
+
 			$('.seven-action-children').css('display', 'block');
 			$('.seven-action').css('z-index', 100);
 
@@ -108,7 +111,6 @@ $(window).on('load', function() {
 		},
 
 		_toLeft: function() {
-			// this._go('Left');
 			var self = this;
 
 			if (self._curIndex >= self.items.length - 1) {
@@ -124,7 +126,6 @@ $(window).on('load', function() {
 		},
 
 		_toRight: function() {
-			// this._go('Right');
 			var self = this;
 
 			self._curIndex--;
@@ -143,8 +144,7 @@ $(window).on('load', function() {
 	};
 
 	$('.seven-photos').each(function(i, c) {
-
 		new DyPager(c);
-	})
+	});
 
 });
